@@ -1,3 +1,11 @@
+main {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 html {
 	font-size: 16px;
 }
@@ -14,6 +22,7 @@ main {
 
 h1, h2 {
 	font-family: 'Lora', serif;
+	font-weight: 700;
 }
 
 h1 {
@@ -22,14 +31,12 @@ h1 {
 
 h2 {
 	font-size: 4em;
+	border-bottom: 1px solid grey;
 }
 
 p {
 	font-size: 2em;
-}
-
-.top {
-	border-bottom: 1px solid grey;
+    
 }
 
 .menu ul {
@@ -42,38 +49,104 @@ p {
 	display: inline;
 	font-size: 4em;
 	text-align: center;
+	padding-right: 20px;
 }
 
 .menu a {
 	text-decoration: none;
+	font-weight: 800;
 }
 
 .menu a:hover {
-	border-bottom: 2px solid grey;
+	border-bottom: 4px solid grey;
 }
-button {
-    color: whitesmoke;
-    
-}
+
 article {
 	height: 100vh;
+	padding-bottom: 80px;
+}
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+#knappar button {
+    font-size: 15px;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    background: none;
+    border: none;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+#game, #score{
+	text-align: center;
+	font-family: 'Lora', serif;
+}
+
+#score {
+	font-size: 2em;
 }
 
 #clickerbutton {
-	font-size: 4em;
-	width:400px;
-	height:400px;
+	font-size: 6em;
+	width:300px;
+	height:300px;
 	border-radius: 200px;
-    background-image: url("button.jpg");
-    background-size:     cover;                      
-    background-repeat:   no-repeat;
-    background-position: center center; 
+	background-color: red;
 }
 
 #clickerbutton:active {
-	background-color: rgba(255,0,0,5) ; 
-    
+	transition: border 1s;
+	background-color: rgba(255,0,0,1);
+	border: 80px solid black;
 }
 #clickerbutton:focus {
-    outline:0px;
+	outline: 0px;
+}
+
+.logo {
+	font-size: 6em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(51,51,51,0.8);
+}
+#lionSuper {
+    display: none;
+}
+#knappar {
+    display: none;
+}
+.bottomPar {
+    font-size: 1.2em;
+     
 }

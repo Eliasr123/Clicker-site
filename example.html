@@ -6,44 +6,45 @@
 	<title>Clicker</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="normalize.css">
-	<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,800" rel="stylesheet">
 </head>
 <body>
 	<main>
-		<!-- huvudmeny -->
-		<header class="top">
-			<h1>Clicker</h1>
-			<!-- https://www.w3schools.com/css/css_navbar.asp -->
-			<nav class="menu">
-				<ul>
-					<li><a href="#welcome">Welcome</a></li>
-					<li><a href="#clicker">Clicker</a></li>
-					<li><a href="#about">About</a></li>
-				</ul>
-			</nav>
-		</header>
-		<!-- innehåll -->
+		
 		<section>
+            <div class="sidenav">
+                <a href="#welcome">Welcome</a>
+                <a href="#clicker">Game</a>
+                <a href="#about">About</a>
+                <a id="dropDownForShop">Game Shop</a>
+                <div id="knappar">
+                	<button id="lejon" accesskey="l">Lejon</button>
+                    <button id="lionSuper">SuperLejon</button>
+					<button id="zebra" accesskey="z">Zebra</button>	
+                </div>
+            </div>
+
 			<article id="welcome">
 				<header>
 					<h2>Welcome</h2>
 					<p>Posted at <time>2018-01-19</time></p>
 				</header>
+                
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ullam a iusto, tempora quas expedita nemo, doloremque, incidunt eveniet architecto molestiae voluptatibus quae quaerat hic possimus? Eius, a ab quis.</p>
 			</article>
 			<article id="clicker">
 				<header>
-					<h2>Clicker</h2>
+					<h2>Game</h2>
 					<p>Posted at <time>2018-01-19</time></p>
 				</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ullam a iusto, tempora quas expedita nemo, doloremque, incidunt eveniet architecto molestiae voluptatibus quae quaerat hic possimus? Eius, a ab quis.</p>
-				
+				<div id="game">
+					<button id="clickerbutton">CLICK!</button>
+				</div>
+				<div id="score"></div>
+				<div id="powerUps">					
+					<p id="powerText"></p>
+				</div>
 			</article>
-            <div id="game">
-                    
-                <button id="clickerbutton">CLICK!</button>
-            </div>
-            <div id="score"> </div>
 			<article id="about">
 				<header>
 					<h2>About</h2>
@@ -54,21 +55,9 @@
 		</section>
 		<!-- sidfot -->
 		<footer>
-			<p>Sidan skapad av Jens</p>
+			<p class="bottomPar">"Sidan "lånad" av Jens <a href="#top">Back to top</a></p>
 		</footer>
 	</main>
-    <script>
-        var button = document.getElementById("clickerbutton");
-        var scoreDiv = document.getElementById("score");
-        var scoreText = document.getElementById("p")
-        var clickValue = 1;
-        var bank = 0;
-        button.addEventListener("click", function() {
-            bank += clickValue;
-            console.log("bank");
-            
-        });
-        scoreDiv.appendChild(scoreText)
-    </script>
+	<script src="spel.js"></script>
 </body>
 </html>
